@@ -1,0 +1,139 @@
+/* Variáveis de Cores */
+:root {
+    --laranja: #F48635;
+    --azul: #3E4096;
+    --vermelho: #ED3237;
+    --cinza: #373535;
+    --amarelo: #F4DD2B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--cinza);
+    margin: 0;
+}
+
+header {
+    background-color: var(--azul);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    min-height: 7vh;
+}
+
+.imagem_logo {
+    width: 7vw;
+    min-width: 80px;
+}
+
+.imagem_logo img {
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav li {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav li:hover {
+    color: var(--amarelo);
+}
+
+nav li a{
+    color: white;
+    transition: color 0.3s;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    color: var(--amarelo);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .eventos_sociais {
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+
+    .eventos_1, .eventos_2 {
+        width: 100%;
+    }
+}
+
+
+.eventos_sociais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    padding: 60px 10%;
+    min-height: 50vh;
+}
+
+.eventos_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+.eventos_1 h2 {
+    color: var(--azul);
+    font-size: 2.5rem;
+}
+
+.eventos_1 h3 {
+    color: var(--laranja);
+    font-size: 1.8rem;
+}
+
+.eventos_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.eventos_2 img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 10px 10px 0px var(--azul); /* Sombra criativa com cor da marca */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eventos_2 img:hover {
+    transform: translateY(-5px);
+    box-shadow: 15px 15px 0px var(--vermelho); /* Efeito interativo */
+}

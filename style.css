@@ -1,0 +1,171 @@
+/* Variáveis de Cores */
+:root {
+    --laranja: #F48635;
+    --azul: #3E4096;
+    --vermelho: #ED3237;
+    --cinza: #373535;
+    --amarelo: #F4DD2B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--cinza);
+    margin: 0;
+}
+
+header {
+    background-color: var(--azul);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    min-height: 7vh;
+}
+
+.imagem_logo {
+    width: 7vw;
+    min-width: 80px;
+}
+
+.imagem_logo img {
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav li {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav li:hover {
+    color: var(--amarelo);
+}
+
+nav li a{
+    color: white;
+    transition: color 0.3s;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    color: var(--amarelo);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .eventos_sociais {
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+
+    .eventos_1, .eventos_2 {
+        width: 100%;
+    }
+}
+
+/* Configuração do Vídeo e Seção Principal */
+.parte_1 {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.parte_1 h2, .parte_1 p {
+    background-color: rgba(55, 53, 53, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 80%;
+    margin: 10px 0;
+}
+
+/* Estilos Gerais das Seções */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Seções Coloridas (Missão, Visão, Valores) */
+.sobre_1 {
+    background-color: var(--amarelo);
+    color: var(--cinza);
+}
+
+.sobre {
+    background-color: var(--laranja);
+    color: white;
+}
+
+.visao {
+    background-color: var(--vermelho);
+    color: white;
+}
+
+.valores {
+    background-color: var(--azul);
+    color: white;
+}
+
+/* Estilo dos Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card-item {
+    background: white;
+    color: var(--cinza); /* Texto escuro dentro do card para contraste */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 180px;
+    border-radius: 8px;
+    border-bottom: 5px solid var(--amarelo);
+    font-weight: bold;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+}
