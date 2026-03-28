@@ -1,75 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saude Bem Estar</title>
-    <link rel="stylesheet" href="./style_oficinais.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saúde e Bem Estar | Passatempo Educativo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.saude_bem_estar.css" />
 </head>
 <body>
 
-    <header>
-        <div class="imagem_logo">
-                    <img src="./Logo_Passatempo.png" alt="">
-        </div>
+  <header class="header">
+    <div class="imagem_logo">
+      <img src="./Logo_Passatempo.png" alt="Logo Passatempo Educativo">
+    </div>
 
-
-        <nav>
-            <ul>
+    <nav>
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="./eventos.html">Eventos</a></li>
         <li><a href="./oficinais.html">Oficinas</a></li>
-        <li><a href="./saude_bem_estar.html">Saúde e Bem Estar</a></li>
+        <li><a class="ativo" href="./saude_bem_estar.html">Saúde e Bem Estar</a></li>
         <li><a href="./contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
+  <main>
 
-        <section class="eventos_sociais">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero_texto">
+        <span class="selo">Movimento, energia e qualidade de vida</span>
+        <h1>Atividades de saúde e bem-estar com mais leveza, diversão e cuidado</h1>
+        <p>
+          Promovemos experiências que incentivam hábitos saudáveis, integração,
+          movimento corporal e bem-estar para diferentes idades e públicos.
+          Tudo com uma proposta dinâmica, acolhedora e cheia de energia.
+        </p>
 
-            <section class="eventos_1">
+        <div class="hero_botoes">
+          <a href="https://wa.me/5511997579540?text=Olá!%20Gostaria%20de%20contratar%20uma%20atividade%20de%20saúde%20e%20bem-estar." target="_blank" class="btn btn_principal">
+            CONTRATE AGORA
+          </a>
 
-            <h2>Saúde e Bem Estar</h2>
-             
-            <p>Sabemos a importância do cuidado com a saúde e o bem-estar através da prática de atividades físicas, oferecendo diferentes modalidades e serviços que promovem um estilo de vida saudável.
-</p>
+          <a href="#servicos" class="btn btn_secundario">
+            Ver atividades
+          </a>
+        </div>
+      </div>
+
+      <div class="hero_imagem">
+        <img src="./clinicas esportivas .jpg" alt="Atividade esportiva com crianças">
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="destaques">
+      <div class="destaque_card">
+        <h3>Mais Movimento</h3>
+        <p>Atividades físicas que estimulam coordenação, energia e hábitos saudáveis.</p>
+      </div>
+
+      <div class="destaque_card">
+        <h3>Mais Integração</h3>
+        <p>Experiências em grupo que fortalecem convivência, participação e espírito de equipe.</p>
+      </div>
+
+      <div class="destaque_card">
+        <h3>Mais Bem-Estar</h3>
+        <p>Momentos que unem diversão, saúde física, equilíbrio emocional e qualidade de vida.</p>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="categorias" id="servicos">
+      <div class="titulo_secao">
+        <span>Experiências ativas e saudáveis</span>
+        <h2>Nossas Atividades</h2>
+        <p>Conheça opções que combinam esporte, bem-estar e diversão.</p>
+      </div>
+
+      <div class="cards_grid">
+
+        <article class="card_evento grande">
+          <img src="./clinicas esportivas .jpg" alt="Clínicas Esportivas">
+          <div class="card_conteudo">
+            <span class="tag">Esporte</span>
             <h3>Clínicas Esportivas</h3>
+            <p>
+              Atividades desenvolvidas para introduzir crianças ao universo esportivo
+              de maneira divertida, segura e educativa. Trabalhamos desenvolvimento físico,
+              social e emocional por meio de práticas conduzidas com dinâmica, ludicidade e acolhimento.
+            </p>
 
-            <p>Nossas Clínicas Esportivas são projetadas para introduzir crianças ao mundo dos esportes de maneira divertida, segura e educativa. Com foco no desenvolvimento físico, social e emocional, oferecemos uma ampla gama de modalidades esportivas que estimulam o espírito de equipe, a disciplina, e o gosto pela atividade física desde cedo. As atividades são conduzidas por profissionais qualificados e utilizam métodos lúdicos para ensinar os fundamentos de diferentes esportes.
+            <p class="lista_modalidades">
+              <strong>Modalidades:</strong> Futebol, Basquete, Vôlei, Ginástica, Circo,
+              Capoeira, Handebol, Takkyu Volley, Esgrima, Pilates, Funcional Kids e muito mais.
+            </p>
 
-</p>
-<p>Futebol, Basquete, Vôlei, Ginástica, Circo, Capoeira, Handebol, Takkyu Volley, Esgrima, Pilates, Funcional Kids e muito mais.</p>
+            <a href="https://wa.me/5511997579540?text=Olá!%20Tenho%20interesse%20em%20Clínicas%20Esportivas." target="_blank" class="card_btn">
+              Contrate
+            </a>
+          </div>
+        </article>
 
-        </section>
-        <section class="eventos_2">
-
-        <img src="./clinicas esportivas .jpg" alt="">
-        </section>
-        </section>
-
-        <section class="eventos_sociais">
-
-            <section class="eventos_2">
-
-        <img src="./Estação Fitness .jpeg" alt="">
-        </section>
-
-            <section class="eventos_1">
-
+        <article class="card_evento grande">
+          <img src="./Estação Fitness .jpeg" alt="Estação Fitness">
+          <div class="card_conteudo">
+            <span class="tag">Bem-Estar</span>
             <h3>Estação Fitness</h3>
+            <p>
+              Um espaço voltado para exercício físico, saúde e qualidade de vida, com atividades
+              que atendem diferentes perfis e faixas etárias. As ações podem incluir treinos,
+              aulas coletivas e momentos voltados ao condicionamento físico e bem-estar geral.
+            </p>
 
-            <p>A Estação Fitness é um espaço completo para todas as idades, dedicado ao exercício físico e ao bem-estar. Aqui, oferecemos uma variedade de atividades para quem busca melhorar a saúde, a condição física e o bem-estar geral. Nossas sessões incluem treinos personalizados, aulas em grupo e programas de condicionamento físico que atendem às necessidades de iniciantes a atletas avançados.
-</p>
+            <p class="lista_modalidades">
+              <strong>Modalidades:</strong> Yoga, Pilates, Zumba, Funcional, Crossfit e muito mais.
+            </p>
 
-<p>Yoga, Pilates, Zumba, Funcional, Crossfit e muito mais.</p>
-        </section>
-        
-        </section>
+            <a href="https://wa.me/5511997579540?text=Olá!%20Tenho%20interesse%20na%20Estação%20Fitness." target="_blank" class="card_btn">
+              Contrate
+            </a>
+          </div>
+        </article>
 
+      </div>
+    </section>
 
-    </main>
-    
+    <!-- MODALIDADES -->
+    <section class="modalidades">
+      <div class="titulo_secao">
+        <span>Possibilidades para o seu público</span>
+        <h2>Modalidades em destaque</h2>
+      </div>
+
+      <div class="chips">
+        <span>Futebol</span>
+        <span>Basquete</span>
+        <span>Vôlei</span>
+        <span>Ginástica</span>
+        <span>Circo</span>
+        <span>Capoeira</span>
+        <span>Handebol</span>
+        <span>Esgrima</span>
+        <span>Pilates</span>
+        <span>Yoga</span>
+        <span>Zumba</span>
+        <span>Funcional</span>
+        <span>Crossfit</span>
+        <span>Funcional Kids</span>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta_final">
+      <div class="cta_box">
+        <h2>Vamos levar mais saúde e energia para o seu evento?</h2>
+        <p>
+          Entre em contato e receba uma proposta personalizada para escolas,
+          empresas, condomínios, clubes e ações especiais.
+        </p>
+
+        <div class="cta_botoes">
+          <a href="https://wa.me/5511997579540?text=Olá!%20Quero%20solicitar%20uma%20proposta%20de%20Saúde%20e%20Bem-Estar." target="_blank" class="btn btn_principal">
+            Chamar no WhatsApp
+          </a>
+
+          <a href="https://www.instagram.com/" target="_blank" class="btn btn_secundario">
+            Ver Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
 </body>
 </html>

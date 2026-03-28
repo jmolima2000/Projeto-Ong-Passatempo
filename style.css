@@ -5,6 +5,8 @@
     --vermelho: #ED3237;
     --cinza: #373535;
     --amarelo: #F4DD2B;
+    --branco: #FFFFFF;
+    --bg-light: #f9f9f9;
 }
 
 * {
@@ -14,158 +16,216 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: var(--cinza);
     margin: 0;
+    line-height: 1.6;
+    background-color: var(--branco);
 }
 
-header {
-    background-color: var(--azul);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    min-height: 7vh;
+h1, h2, h3, .selo {
+    font-family: 'Baloo 2', cursive;
+}
+
+/* Header */
+/* HEADER */
+.header {
+  background: linear-gradient(90deg, var(--azul), #5b5fd6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  min-height: 88px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 8px 20px rgba(62, 64, 150, 0.18);
 }
 
 .imagem_logo {
-    width: 7vw;
-    min-width: 80px;
+  width: 110px;
 }
 
 .imagem_logo img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  display: block;
 }
 
 nav ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
-nav li {
-    cursor: pointer;
-    transition: color 0.3s;
+nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 10px 14px;
+  border-radius: 999px;
+  transition: 0.3s ease;
 }
 
-nav li:hover {
-    color: var(--amarelo);
+nav li a:hover,
+nav li a.ativo {
+  background-color: rgba(255,255,255,0.14);
+  color: var(--amarelo);
 }
 
-nav li a{
-    color: white;
-    transition: color 0.3s;
-    list-style: none;
-    text-decoration: none;
-}
-
-nav li a:hover{
-    color: var(--amarelo);
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    .eventos_sociais {
-        flex-direction: column;
-        padding: 40px 5%;
-    }
-
-    .eventos_1, .eventos_2 {
-        width: 100%;
-    }
-}
-
-/* Configuração do Vídeo e Seção Principal */
+/* Seção de Vídeo (Destaque Principal) */
 .parte_1 {
     position: relative;
-    height: 100vh;
+    height: 70vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: var(--branco);
     overflow: hidden;
 }
 
 .video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: -1;
 }
 
-.parte_1 h2, .parte_1 p {
-    background-color: rgba(55, 53, 53, 0.7);
-    padding: 15px;
-    border-radius: 8px;
-    max-width: 80%;
-    margin: 10px 0;
+.video_overlay_content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 20px;
 }
 
-/* Estilos Gerais das Seções */
-section {
-    padding: 60px 20px;
+.video_overlay_content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Seção Equipe (Estilo Hero do Eventos) */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    gap: 40px;
+    background-color: var(--bg-light);
+}
+
+.hero_texto {
+    flex: 1;
+    text-align: left;
+}
+
+.selo {
+    display: inline-block;
+    background-color: var(--amarelo);
+    color: var(--azul);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero_texto h1 {
+    font-size: 2.8rem;
+    color: var(--azul);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero_texto p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.hero_botoes {
+    display: flex;
+    gap: 15px;
+}
+
+.hero_imagem {
+    flex: 1;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 20px 20px 0 var(--laranja);
+}
+
+.hero_imagem img {
+    width: 100%;
+    height: auto;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    font-family: 'Baloo 2', cursive;
+    transition: transform 0.3s, filter 0.3s;
     text-align: center;
 }
-
-/* Seções Coloridas (Missão, Visão, Valores) */
-.sobre_1 {
-    background-color: var(--amarelo);
-    color: var(--cinza);
+.btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
-.sobre {
+.btn_principal {
     background-color: var(--laranja);
-    color: white;
+    color: var(--branco);
 }
 
-.visao {
-    background-color: var(--vermelho);
-    color: white;
-}
-
-.valores {
+.btn_secundario {
     background-color: var(--azul);
-    color: white;
+    color: var(--branco);
 }
 
-/* Estilo dos Cards */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
+/* Destaques */
+.destaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 80px 5%;
 }
 
-.card-item {
-    background: white;
-    color: var(--cinza); /* Texto escuro dentro do card para contraste */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    padding: 20px;
-    width: 180px;
-    border-radius: 8px;
-    border-bottom: 5px solid var(--amarelo);
-    font-weight: bold;
-    transition: transform 0.2s;
-    cursor: pointer;
+.destaque_card {
+    background: var(--bg-light);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.card-item:hover {
-    transform: translateY(-5px);
+/* Responsividade Geral */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero_texto {
+        text-align: center;
+    }
+    .hero_botoes {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header { flex-direction: column; gap: 20px; }
+    nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .video_overlay_content h2 { font-size: 1.8rem; }
 }
