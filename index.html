@@ -30,13 +30,29 @@
 </header>
 
   <main>
-    <!-- SEÇÃO VÍDEO (Mantendo seu padrão anterior) -->
+    <!-- SEÇÃO DESTAQUE (Carrossel de Imagens) -->
     <section class="parte_1">
-      <video class="video" src="./Roteiro_Visual_para_Eventos_Dinâmicos.mp4" autoplay loop muted></video>
+      <div class="carrossel_home" id="carrosselHome">
+        <div class="slide"><img src="./imagens/corporativo.jpg" alt="Atividade de Recreação"></div>
+        <div class="slide"><img src="./imagens/Home.jpeg" alt="Batalha Nerf"></div>
+        <div class="slide"><img src="./imagens/IMG-20260402-WA0040.jpg" alt="Bolhas Gigantes"></div>
+        <div class="slide"><img src="./imagens/IMG_20221214_105638220_HDR.jpg"></div>
+      
+        <div class="slide"><img src="./imagens/Kids day  (1).png" alt="Atividade de Recreação"></div>
+        <div class="slide"><img src="./imagens/WhatsApp Image 2026-04-08 at 12.21.42.jpeg" alt="Batalha Nerf"></div>
+        <div class="slide"><img src="./imagens/WhatsApp Image 2026-04-17 at 08.12.51 (1).jpeg" alt="Bolhas Gigantes"></div>
+        <div class="slide"><img src="./imagens/WhatsApp Image 2026-04-17 at 08.13.52 (1).jpeg"></div>
+      
+      
+      </div>
+
       <div class="video_overlay_content">
         <h2>A Passatempo Educativo transforma momentos em memórias.</h2>
         <p>Experiências que encantam, ensinam e divertem.</p>
       </div>
+
+      <button class="carrossel_btn esquerda" onclick="moverCarrosselHome(-1)">❮</button>
+      <button class="carrossel_btn direita" onclick="moverCarrosselHome(1)">❯</button>
     </section>
 
     <!-- SEÇÃO EQUIPE (Seguindo a estrutura do eventos.html) -->
@@ -75,6 +91,30 @@
       </div>
     </section> -->
   </main>
+
+  <script>
+    let autoPlayHome = setInterval(() => moverCarrosselHome(1), 5000);
+
+    function moverCarrosselHome(direcao) {
+      const carrossel = document.getElementById("carrosselHome");
+      const larguraSlide = carrossel.offsetWidth;
+      const noFinal = carrossel.scrollLeft + larguraSlide >= carrossel.scrollWidth - 10;
+
+      // Se estiver indo para a direita e chegar no fim, volta ao início
+      if (direcao === 1 && noFinal) {
+        carrossel.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        carrossel.scrollBy({
+          left: direcao * larguraSlide,
+          behavior: "smooth"
+        });
+      }
+
+      // Reinicia o timer do autoplay para evitar pulos logo após um clique manual
+      clearInterval(autoPlayHome);
+      autoPlayHome = setInterval(() => moverCarrosselHome(1), 5000);
+    }
+  </script>
 
 </body>
 </html>
