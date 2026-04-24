@@ -50,6 +50,7 @@ h1, h2, h3, .selo {
 .imagem_logo img {
   width: 100%;
   display: block;
+  filter: drop-shadow(0 0 3px #262424);
 }
 
 nav ul {
